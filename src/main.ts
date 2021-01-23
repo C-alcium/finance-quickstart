@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import "bulma/css/bulma.css"
+import 'flag-icon-css/css/flag-icon.css'
 
 createApp(App)
     .use(store)
