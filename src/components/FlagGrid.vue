@@ -1,13 +1,13 @@
 <template>
     <div class="flag-grid">
         <div class="columns" v-for="item in countryCodesChunked" :key="item.code">
-            <div :class="`column is-third flag-icon flag-icon-${item[0].code}`">
+            <div @click="onFlagClick(item[0])" :class="`column is-third flag-icon flag-icon-${item[0].code}`">
                 <span> {{ item[0].name }}</span>
             </div>
-            <div :class="`column is-third flag-icon flag-icon-${item[1].code}`">
+            <div @click="onFlagClick(item[1])" :class="`column is-third flag-icon flag-icon-${item[1].code}`">
                 <span> {{ item[1].name }}</span>
             </div>
-            <div :class="`column is-third flag-icon flag-icon-${item[2].code}`">
+            <div @click="onFlagClick(item[2])" :class="`column is-third flag-icon flag-icon-${item[2].code}`">
                 <span> {{ item[2].name }}</span>
             </div>
         </div>
@@ -20,6 +20,16 @@ import { chunk } from 'lodash';
 
 export default defineComponent({
     name:'FlagGrid',
+    methods: {
+        onFlagClick(item: any) {
+            // propagate flag click up the stack
+            const event = {
+                name: item.name as string,
+                code: item.code as string
+            }
+            this.$emit('flagClick', event)
+        }
+    },
     data() {
         // define all of the EU country codes in just a normal fashion.
         // later, they will be diced up into thirds
