@@ -1,13 +1,13 @@
 <template>
     <div class="flag-grid">
         <div class="columns" v-for="item in countryCodesChunked" :key="item.code">
-            <div :class="`column is-third flag-icon flag-icon-squared flag-icon-${item[0].code}`">
+            <div :class="`column is-third flag-icon flag-icon-${item[0].code}`">
                 <span> {{ item[0].name }}</span>
             </div>
-            <div :class="`column is-third flag-icon flag-icon-squared flag-icon-${item[1].code}`">
+            <div :class="`column is-third flag-icon flag-icon-${item[1].code}`">
                 <span> {{ item[1].name }}</span>
             </div>
-            <div :class="`column is-third flag-icon flag-icon-squared flag-icon-${item[2].code}`">
+            <div :class="`column is-third flag-icon flag-icon-${item[2].code}`">
                 <span> {{ item[2].name }}</span>
             </div>
         </div>
@@ -25,17 +25,113 @@ export default defineComponent({
         // later, they will be diced up into thirds
         const countryCodes = [
                 {
-                    name: 'Ireland',
-                    code: 'ie',
-                },
-                {
                     name: 'Belgium',
                     code: 'be',
                 },
                 {
+                    name: 'Bulgaria',
+                    code: 'bg',
+                },
+                {
+                    name: 'Czechia',
+                    code: 'cz',
+                },
+                {
+                    name: 'Denmark',
+                    code: 'dk',
+                },
+                {
                     name: 'Germany',
                     code: 'de',
-                }
+                },
+                {
+                    name: 'Estonia',
+                    code: 'ee',
+                },
+                {
+                    name: 'Ireland',
+                    code: 'ie',
+                },
+                {
+                    name: 'Greece',
+                    code: 'gr',
+                },
+                {
+                    name: 'Spain',
+                    code: 'es',
+                },
+                {
+                    name: 'France',
+                    code: 'fr',
+                },
+                {
+                    name: 'Croatia',
+                    code: 'hr',
+                },
+                {
+                    name: 'Italy',
+                    code: 'it',
+                },
+                {
+                    name: 'Cyprus',
+                    code: 'cy',
+                },
+                {
+                    name: 'Latvia',
+                    code: 'lv',
+                },
+                {
+                    name: 'Lithuania',
+                    code: 'lt',
+                },
+                {
+                    name: 'Luxembourg',
+                    code: 'lu',
+                },
+                {
+                    name: 'Hungary',
+                    code: 'hu',
+                },
+                {
+                    name: 'Malta',
+                    code: 'mt',
+                },
+                {
+                    name: 'Netherlands',
+                    code: 'nl',
+                },
+                {
+                    name: 'Austria',
+                    code: 'at',
+                },
+                {
+                    name: 'Poland',
+                    code: 'pl',
+                },
+                {
+                    name: 'Portugal',
+                    code: 'pt',
+                },
+                {
+                    name: 'Romania',
+                    code: 'ro',
+                },
+                {
+                    name: 'Slovenia',
+                    code: 'sl',
+                },
+                {
+                    name: 'Slovakia',
+                    code: 'sk',
+                },
+                {
+                    name: 'Finland',
+                    code: 'fi',
+                },
+                {
+                    name: 'Sweden',
+                    code: 'se',
+                },
             ]
         return {
             countryCodesChunked: chunk(countryCodes, 3)
@@ -46,7 +142,10 @@ export default defineComponent({
 
 <style>
 .flag-grid {
-    padding-top: 20px
+    padding-top: 20px;
+}
+.columns {
+    padding-top: 30px;
 }
 .flag-icon {
     background-size: contain;
