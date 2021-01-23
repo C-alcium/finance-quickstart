@@ -1,18 +1,19 @@
 <template>
-  <div class="content" v-html="content"/>
+  <markdown-container :markdown="content"/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import MarkdownIt from 'markdown-it';
+import MarkdownContainer from '@/components/MarkdownContainer.vue';
 import HomeContent from '@/assets/content/en/home.md';
 
 export default defineComponent({
+  components: { MarkdownContainer },
   name: 'Home',
   data() {
     return {
-      content: new MarkdownIt().render(HomeContent)
+      content: HomeContent
     }
-  },
+  }
 });
 </script>

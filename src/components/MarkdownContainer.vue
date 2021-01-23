@@ -1,0 +1,30 @@
+<template>
+  <div class="content" v-html="content"/>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+import MarkdownIt from 'markdown-it';
+
+const md = new MarkdownIt()
+
+export default defineComponent({
+  name: 'MarkdownContainer',
+  props: {
+      markdown: {
+          type: String,
+          required: true,
+      } 
+  },
+  data() {
+      return {
+          content: this.renderContent()
+      }
+  },
+  methods: {
+      renderContent(){
+          return md.render(this.markdown)
+      }
+  }
+});
+</script>
