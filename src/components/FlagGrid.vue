@@ -1,15 +1,15 @@
 <template>
     <div class="flag-grid">
         <div class="columns" v-for="item in countryCodesChunked" :key="item.code">
-            <div @click="onFlagClick(item[0])" :class="`column is-third flag-icon flag-icon-${item[0].code}`">
-                <span> {{ item[0].name }}</span>
-            </div>
-            <div @click="onFlagClick(item[1])" :class="`column is-third flag-icon flag-icon-${item[1].code}`">
-                <span> {{ item[1].name }}</span>
-            </div>
-            <div @click="onFlagClick(item[2])" :class="`column is-third flag-icon flag-icon-${item[2].code}`">
-                <span> {{ item[2].name }}</span>
-            </div>
+            <button @click="onFlagClick(item[0])" :class="`column button is-third flag-icon flag-icon-${item[0].code}`">
+                {{ item[0].countryName }}
+            </button>
+            <button @click="onFlagClick(item[1])" :class="`column button is-third flag-icon flag-icon-${item[1].code}`">
+                <span> {{ item[1].countryName }}</span>
+            </button>
+            <button @click="onFlagClick(item[2])" :class="`column button is-third flag-icon flag-icon-${item[2].code}`">
+                <span> {{ item[2].countryName }}</span>
+            </button>
         </div>
     </div>
 </template>
@@ -17,129 +17,125 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { chunk } from 'lodash';
+import FlagEvent from "@/types/FlagEvent";
 
 export default defineComponent({
     name:'FlagGrid',
     methods: {
-        onFlagClick(item: any) {
-            // propagate flag click up the stack
-            const event = {
-                name: item.name as string,
-                code: item.code as string
-            }
-            this.$emit('flagClick', event)
+        onFlagClick(item: FlagEvent) {
+            this.$emit('flagClick', item)
         }
     },
     data() {
         // define all of the EU country codes in just a normal fashion.
         // later, they will be diced up into thirds
-        const countryCodes = [
+        const countryCodes: Array<FlagEvent> = [
                 {
-                    name: 'Belgium',
+                    countryName: 'Belgium',
                     code: 'be',
                 },
                 {
-                    name: 'Bulgaria',
+                    countryName: 'Bulgaria',
                     code: 'bg',
                 },
                 {
-                    name: 'Czechia',
+                    countryName: 'Czechia',
                     code: 'cz',
                 },
                 {
-                    name: 'Denmark',
+                    countryName: 'Denmark',
                     code: 'dk',
                 },
                 {
-                    name: 'Germany',
+                    countryName: 'Germany',
                     code: 'de',
                 },
                 {
-                    name: 'Estonia',
+                    countryName: 'Estonia',
                     code: 'ee',
                 },
                 {
-                    name: 'Ireland',
+                    countryName: 'Ireland',
                     code: 'ie',
                 },
                 {
-                    name: 'Greece',
+                    countryName: 'Greece',
                     code: 'gr',
                 },
                 {
-                    name: 'Spain',
+                    countryName: 'Spain',
                     code: 'es',
                 },
                 {
-                    name: 'France',
+                    countryName: 'France',
                     code: 'fr',
                 },
                 {
-                    name: 'Croatia',
+                    countryName: 'Croatia',
                     code: 'hr',
                 },
                 {
-                    name: 'Italy',
+                    countryName: 'Italy',
                     code: 'it',
                 },
                 {
-                    name: 'Cyprus',
+                    countryName: 'Cyprus',
                     code: 'cy',
                 },
                 {
-                    name: 'Latvia',
+                    countryName: 'Latvia',
                     code: 'lv',
                 },
                 {
-                    name: 'Lithuania',
+                    countryName: 'Lithuania',
                     code: 'lt',
                 },
                 {
-                    name: 'Luxembourg',
+                    countryName: 'Luxembourg',
                     code: 'lu',
                 },
                 {
-                    name: 'Hungary',
+                    countryName: 'Hungary',
                     code: 'hu',
                 },
                 {
-                    name: 'Malta',
+                    countryName: 'Malta',
                     code: 'mt',
                 },
                 {
-                    name: 'Netherlands',
+                    countryName: 'Netherlands',
                     code: 'nl',
                 },
                 {
-                    name: 'Austria',
+                    countryName: 'Austria',
                     code: 'at',
                 },
                 {
-                    name: 'Poland',
+                    countryName: 'Poland',
                     code: 'pl',
                 },
                 {
-                    name: 'Portugal',
+                    countryName: 'Portugal',
                     code: 'pt',
                 },
                 {
-                    name: 'Romania',
+                    countryName: 'Romania',
                     code: 'ro',
                 },
                 {
-                    name: 'Slovenia',
+                    countryName: 'Slovenia',
                     code: 'sl',
                 },
                 {
-                    name: 'Slovakia',
+                    countryName: 'Slovakia',
                     code: 'sk',
                 },
                 {
-                    name: 'Finland',
+                    countryName: 'Finland',
                     code: 'fi',
                 },
                 {
-                    name: 'Sweden',
+                    countryName: 'Sweden',
                     code: 'se',
                 },
             ]
@@ -150,7 +146,11 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style scoped>
+.button {
+    padding: 0;
+    border: none;
+}
 .flag-grid {
     padding-top: 20px;
 }

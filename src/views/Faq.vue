@@ -16,6 +16,7 @@
 <script lang="ts">
 import Hero from "@/components/Hero.vue";
 import FlagGrid from "@/components/FlagGrid.vue";
+import FlagEvent from '@/types/FlagEvent';
 import { defineComponent } from "vue";
 import MarkdownContainer from "@/components/MarkdownContainer.vue";
 
@@ -28,14 +29,14 @@ export default defineComponent({
         }
     },
     methods: {
-        onFlagClick(e: any) {
-            console.log(e)
+        onFlagClick(e: FlagEvent) {
+            const res = this.$store.getters.getCountryFaq(e.countryName)
+            console.log(res)
         }
-    }
+    },
 })
 </script>
-,
-    MarkdownContainer
+
 <style>
 
 </style>

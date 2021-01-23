@@ -1,26 +1,20 @@
 import { createStore } from 'vuex'
 import IrelandFaq from '@/assets/content/en/faq/ireland.md';
 import GermanyFaq from '@/assets/content/en/faq/germany.md';
+import { State } from 'vue';
 
-interface FAQ {
-  ireland: string;
-  germany: string;
-  [key: string]: string;
-}
-
-const faq: FAQ = {
-  ireland: IrelandFaq as string,
-  germany: GermanyFaq as string,
-}
 
 export default createStore({
-  state: {
-    faq
-  },
-  getters: {
-    getCountryFaq: state => (country: string) => {
-      const result = state.faq[country] 
-      return result
+    state: {
+      faq: {
+        ireland: IrelandFaq as string,
+        germany: GermanyFaq as string,
+      },
+    },
+    getters: {
+      getCountryFaq: (state: State) => (country: string) => {
+        const result = state.faq[country.toLowerCase()]
+        return result
+      }
     }
-  }
 })
