@@ -1,5 +1,5 @@
 <template>
-  <section :class="`hero ${classData}`">
+  <section class="hero">
     <div class="hero-body">
       <div class="container">
         <h1 class="title">{{ title }}</h1>
@@ -21,11 +21,6 @@ export default defineComponent({
             default: ''
         },
         subtitle: {
-            type: String,
-            required: false,
-            default: ''
-        },
-        classData: {
             type: String,
             required: false,
             default: ''
