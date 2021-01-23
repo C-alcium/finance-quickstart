@@ -1,11 +1,15 @@
 <template>
     <hero class="is-primary has-text-centered"
           title="Per country FAQ"
-          subtitle="Click on your country to see a list of common FAQ questions"
           />
-    <div class="faq">
-        <flag-grid/>
-    </div>
+
+    <p class="has-text-centered"> 
+        Below is a list of exclusively EU countries. 
+    </p>
+    <p class="has-text-centered"> 
+        <b>Click</b> or <b>tap</b> on your country to view the FAQ for it.
+    </p>
+    <flag-grid/>
 </template>
 
 <script lang="ts">
