@@ -7,7 +7,7 @@ At the moment, the current goal is to cover the base topics in English, and late
 ### What if I notice something wrong or inaccurate on this website
 
 You can freely make a pull request citing why the information is inaccurate. The way to do that is listed under
-how to contribute this website. This website is intended to be purely a _financial-primer_,
+how to contribute to this website. This website is intended to be purely a _financial-primer_,
 it is not intended to be an all-containing source of knowledge.If you want something like that,
 you should check out the book and resources section when it is available.
 
@@ -30,4 +30,4 @@ do not properly understand.
   You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.
 - **Disclaimer:** Cryptoassets are volatile instruments that can fluctuate widely in a very short timeframe and therefore are not appropriate for all investors.
   Other than via CFDs, trading crypto assets is unregulated and therefore is not supervised by any EU regulatory framework. Your capital is at risk.
-.
+  .

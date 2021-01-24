@@ -38,3 +38,7 @@ is effectively an educated guess on how much money will be earned from something
 Forex, often referred to as **FX** refers to the foreign exchange market in which currencies are bought, sold and exchanged.
 
 [Source](https://en.wikipedia.org/wiki/Foreign_exchange_market)
+
+## Crypto / Crypto Currency 
+
+Crypto 
