@@ -41,12 +41,11 @@ export default defineComponent({
     methods: {
         onFlagClick(e: CountryISO) {
             const res = this.$store.getters.getCountryFaq(e.countryName)
-            console.log(res)
 
             if(res) {
-                console.log('hit')
-                console.log(this.markdown)
                 this.markdown = res
+            } else {
+                this.markdown = 'An FAQ for this country is not yet available'
             }
         }
     },
