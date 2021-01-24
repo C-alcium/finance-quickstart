@@ -45,7 +45,7 @@ export default defineComponent({
             if(res) {
                 this.markdown = res
             } else {
-                this.markdown = 'An FAQ for this country is not yet available'
+                this.markdown = `# An FAQ for ${e.countryName} is not available yet`
             }
         }
     },
