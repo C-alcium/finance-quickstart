@@ -17,12 +17,7 @@ export default defineComponent({
       } 
   },
   computed: {
-      content(): any {
-          return this.renderContent()
-      }
-  },
-  methods: {
-      renderContent(){
+      content(): string {
           return md.render(this.markdown)
       }
   }
