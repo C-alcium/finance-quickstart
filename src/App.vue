@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="app" v-cloak>
     <Header/>
     <router-view/>
   </div>
@@ -30,4 +30,6 @@ export default defineComponent({
 </script>
 
 <style>
+[v-cloak] > * { display:none }
+[v-cloak]::before { content: "loading…" }
 </style>
