@@ -7,10 +7,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import MarkdownContainer from '@/components/MarkdownContainer.vue';
-import HomeContent from '@/assets/content/en/home.md';
-import Hero from '@/components/Hero.vue';
+import { defineComponent } from 'vue'
+import MarkdownContainer from '@/components/MarkdownContainer.vue'
+import HomeContent from '@/assets/content/en/home.md'
+import Hero from '@/components/Hero.vue'
 
 export default defineComponent({
   components: { MarkdownContainer, Hero},
@@ -20,5 +20,5 @@ export default defineComponent({
       content: HomeContent
     }
   }
-});
+})
 </script>

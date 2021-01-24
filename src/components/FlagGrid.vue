@@ -9,11 +9,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { chunk } from 'lodash';
+import { defineComponent } from 'vue'
+import { chunk } from 'lodash'
 import { CountryCodes } from '@/data/CountryCodes'
-import CountryISO from '@/types/CountryISO';
-import FlagButton from './FlagButton.vue';
+import CountryISO from '@/types/CountryISO'
+import FlagButton from './FlagButton.vue'
 
 export default defineComponent({
   components: { FlagButton },

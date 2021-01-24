@@ -3,8 +3,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import MarkdownIt from 'markdown-it';
+import { defineComponent } from 'vue'
+import MarkdownIt from 'markdown-it'
 
 const md = new MarkdownIt()
 
@@ -21,5 +21,5 @@ export default defineComponent({
           return md.render(this.markdown)
       }
   }
-});
+})
 </script>

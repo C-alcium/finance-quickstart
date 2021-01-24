@@ -1,7 +1,7 @@
 import { createStore } from 'vuex'
-import IrelandFaq from '@/assets/content/en/faq/ireland.md';
-import GermanyFaq from '@/assets/content/en/faq/germany.md';
-import { State } from 'vue';
+import IrelandFaq from '@/assets/content/en/faq/ireland.md'
+import GermanyFaq from '@/assets/content/en/faq/germany.md'
+import { State } from 'vue'
 
 
 export default createStore({

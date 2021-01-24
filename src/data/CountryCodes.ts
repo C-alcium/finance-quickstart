@@ -1,4 +1,4 @@
-import CountryISO from '@/types/CountryISO';
+import CountryISO from '@/types/CountryISO'
 
 export const CountryCodes: Array<CountryISO> = [
     {

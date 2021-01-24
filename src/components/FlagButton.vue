@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts">
-import CountryISO from '@/types/CountryISO';
-import { defineComponent } from 'vue';
+import CountryISO from '@/types/CountryISO'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
     name: 'FlagButton',
