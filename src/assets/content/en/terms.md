@@ -39,6 +39,24 @@ Forex, often referred to as **FX** refers to the foreign exchange market in whic
 
 [Source](https://en.wikipedia.org/wiki/Foreign_exchange_market)
 
-## Crypto / Crypto Currency 
+## Crypto / Crypto Currency
 
-Crypto 
+Crypto currency, also known as Crypto is a category of digital currency which leverages varying kinds of cryptographic algorithms
+coupled with distributed ledgers (often blockchain) to securely:
+
+- Produce more coins
+- Represent value digitally
+- Represent coin ownership uniquely
+
+Boiling this down to laymans terms, Crypto currency is a digital currency similar to the normal money that you are used to in that
+you can exchange it for goods and services, it differs in that:
+
+- It is not backed by resource value, e.g. gold or oil
+- The supply is limited by computational power, it is often harder to produce more coin, you can see
+  an example [here](https://en.wikipedia.org/wiki/Bitcoin#Mining)
+- The coins never physically exist, although they may be stored on a physical USB key or similar storage medium if so desired
+- The **value** of Crypto currency is notoriously extremely volatile as it is often viewed as a **speculative instrument**
+
+It is **not** recommended to buy crypto currency unless you _really_ know what you are doing. Beware of Crypto scams.
+
+[Source]https://en.wikipedia.org/wiki/Cryptocurrency)
