@@ -8,10 +8,15 @@ const routes: Array<RouteRecordRaw> = [
     component: Home
   },
   {
+    path: '/commonterms',
+    name: 'Common Terms',
+    component: () => import(/* webpackChunkName: "common-terms" */ '../views/CommonTerms.vue')
+  },
+  {
     path: '/faq',
     name: 'FAQ',
     component: () => import(/* webpackChunkName: "faq" */ '../views/Faq.vue')
-  }
+  },
 ]
 
 const router = createRouter({

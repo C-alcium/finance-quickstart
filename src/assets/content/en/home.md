@@ -30,3 +30,4 @@ do not properly understand.
   You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.
 - **Disclaimer:** Cryptoassets are volatile instruments that can fluctuate widely in a very short timeframe and therefore are not appropriate for all investors.
   Other than via CFDs, trading crypto assets is unregulated and therefore is not supervised by any EU regulatory framework. Your capital is at risk.
+.
