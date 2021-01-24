@@ -59,4 +59,4 @@ you can exchange it for goods and services, it differs in that:
 
 It is **not** recommended to buy crypto currency unless you _really_ know what you are doing. Beware of Crypto scams.
 
-[Source]https://en.wikipedia.org/wiki/Cryptocurrency)
+[Source](https://en.wikipedia.org/wiki/Cryptocurrency)
