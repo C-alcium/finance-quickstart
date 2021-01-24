@@ -14,11 +14,11 @@
 </template>
 
 <script lang="ts">
-import Hero from "@/components/Hero.vue";
-import FlagGrid from "@/components/FlagGrid.vue";
+import Hero from '@/components/Hero.vue';
+import FlagGrid from '@/components/FlagGrid.vue';
 import CountryISO from '@/types/CountryISO';
-import { defineComponent } from "vue";
-import MarkdownContainer from "@/components/MarkdownContainer.vue";
+import { defineComponent } from 'vue';
+import MarkdownContainer from '@/components/MarkdownContainer.vue';
 
 export default defineComponent({
     components: { Hero, FlagGrid, MarkdownContainer },

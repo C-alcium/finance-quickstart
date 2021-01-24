@@ -3,7 +3,7 @@
           title="Finance QuickStart"
           subtitle="A quick start guide to terms, services and differences for finance in the EU"
           />
-      <markdown-container :markdown="content"/>
+    <markdown-container :markdown="content"/>
 </template>
 
 <script lang="ts">
