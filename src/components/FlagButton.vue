@@ -32,7 +32,7 @@ export default defineComponent({
 .button {
     padding: 0;
     border: none;
-    width: 80%
+    width: 100%
 }
 
 .flag-icon {
