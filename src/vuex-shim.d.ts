@@ -2,8 +2,6 @@ import { Store } from 'vuex'
 import { ComponentCustomProperties } from 'vue'
 
 interface FAQ {
-  ireland: string;
-  germany: string;
   [key: string]: string;
 }
 

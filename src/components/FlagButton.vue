@@ -1,5 +1,5 @@
 <template>
-    <div class="column is-third has-text-centered">
+    <div :class="`column is-third has-text-centered ${countryISO.countryName}`">
         <span :class="`flag-icon flag-icon-${countryISO.code}`" @click="onFlagClick()"/>
         <button class="button flag-button" @click="onFlagClick()">
             {{ countryISO.countryName }}
