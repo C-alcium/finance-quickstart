@@ -10,7 +10,7 @@
         <b>Click</b> or <b>tap</b> on your country to view the FAQ for it.
     </p>
     <flag-grid v-on:flagClick="onFlagClick"/>
-    <markdown-container :markdown="content"/>
+    <markdown-container :markdown="markdown"/>
 </template>
 
 <script lang="ts">
@@ -28,10 +28,26 @@ export default defineComponent({
             content: ''
         }
     },
+    computed: {
+        markdown: {
+            get(): string {
+                return this.content
+            },
+            set(a: string) {
+                this.content = a
+            }
+        }
+    },
     methods: {
         onFlagClick(e: CountryISO) {
             const res = this.$store.getters.getCountryFaq(e.countryName)
             console.log(res)
+
+            if(res) {
+                console.log('hit')
+                console.log(this.markdown)
+                this.markdown = res
+            }
         }
     },
 })

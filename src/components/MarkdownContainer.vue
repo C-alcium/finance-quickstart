@@ -16,9 +16,9 @@ export default defineComponent({
           required: true,
       } 
   },
-  data() {
-      return {
-          content: this.renderContent()
+  computed: {
+      content(): any {
+          return this.renderContent()
       }
   },
   methods: {
