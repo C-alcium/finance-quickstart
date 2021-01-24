@@ -1,4 +1,4 @@
-export default interface FlagEvent {
+export default interface CountryISO {
     countryName: string;
     code: string;
 }
