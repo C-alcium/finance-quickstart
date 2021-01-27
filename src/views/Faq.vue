@@ -2,7 +2,7 @@
     <hero class="is-primary has-text-centered"
           title="Per country FAQ"
           />
-
+    <under-construction-notice/>
     <p class="has-text-centered"> 
         Below is a list of exclusively EU countries. 
     </p>
@@ -19,9 +19,10 @@ import FlagGrid from '@/components/FlagGrid.vue'
 import CountryISO from '@/types/CountryISO'
 import { defineComponent } from 'vue'
 import MarkdownContainer from '@/components/MarkdownContainer.vue'
+import UnderConstructionNotice from '@/components/UnderConstructionNotice.vue'
 
 export default defineComponent({
-    components: { Hero, FlagGrid, MarkdownContainer },
+    components: { Hero, FlagGrid, MarkdownContainer, UnderConstructionNotice },
     name: 'Faq',
     data() {
         return {
