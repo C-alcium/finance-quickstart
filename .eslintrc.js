@@ -15,7 +15,8 @@ module.exports = {
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'quotes': [2, 'single', { 'avoidEscape': true }],
-        'semi': ['error', 'never'], 
-        'indent': ['error', 4]
+        'semi': ['error', 'never'],
+        'indent': ['error', 4],
+        'vue/html-indent': ['error', 4]
     }
 }

@@ -3,7 +3,7 @@
         <hero class="is-primary has-centered-text"
               title="Common Terms"
               subtitle="Finance comes with a lot of jargon, here you can find some of the most common terms clearly defined"
-              />
+        />
         <div class="block"/>
         <markdown-container :markdown="content"/>
     </div>

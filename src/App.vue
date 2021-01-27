@@ -1,8 +1,8 @@
 <template>
-  <div class="container" id="app" v-cloak>
-    <Header/>
-    <router-view/>
-  </div>
+    <div class="container" id="app" v-cloak>
+        <Header/>
+        <router-view/>
+    </div>
 </template>
 
 <script>
