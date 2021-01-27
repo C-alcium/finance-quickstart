@@ -1,5 +1,5 @@
 <template>
-    <div v-html="svgContent"/>
+    <span v-html="svgContent"/>
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default defineComponent({
         }
     },
     setup(props) {
-        const svgContent = ref(icons[props.icon].toSvg())
+        const svgContent = ref(icons[props.icon].toSvg({ class: 'ico-props'}))
 
         return {
             svgContent

@@ -1,6 +1,9 @@
 <template>
   <div class="under-construction-notice has-centered-text">
-    <feather-icon icon="box"/>
+    <div class="block">
+      <feather-icon icon="alert-triangle"/>
+      <span> This site is currently under construction, as such this section is not complete.</span>
+    </div>
   </div>
 </template>
 
