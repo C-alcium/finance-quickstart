@@ -17,6 +17,11 @@ const routes: Array<RouteRecordRaw> = [
         name: 'FAQ',
         component: () => import(/* webpackChunkName: "faq" */ '../views/Faq.vue')
     },
+    {
+        path: '/:pathMatch(.*)*',
+        name: '404',
+        component: () => import(/* webpackChunkName: "faq" */ '../views/PageNotFound.vue')
+    },
 ]
 
 const router = createRouter({
