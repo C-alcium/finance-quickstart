@@ -1,6 +1,7 @@
 # finance-quickstart
 
-Finance-Quickstart is a small SPA with the intention to be a financial information repository.
+[Finance-Quickstart](https://finance-quickstart.com/)(password locked until the information contained within has been reviewed) is a small SPA
+with the intention to be a financial information repository.
 The content will **always** be stored in plain markdown files in order to make contributions from
 people who are non-programmers as easy as possible whilst maintaining the standard git flow.
 
