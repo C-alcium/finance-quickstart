@@ -12,10 +12,15 @@ export default defineComponent({
         icon: {
             type: String,
             required: true
+        },
+        color: {
+            type: String,
+            default: 'black',
+            required: false
         }
     },
     setup(props) {
-        const svgContent = ref(icons[props.icon].toSvg({ class: 'ico-props'}))
+        const svgContent = ref(icons[props.icon].toSvg({ class: 'ico-props', color: props.color}))
 
         return {
             svgContent

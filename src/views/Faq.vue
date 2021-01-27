@@ -2,7 +2,7 @@
     <hero class="is-primary has-text-centered"
           title="Per country FAQ"
           />
-    <under-construction-notice/>
+    <under-construction-notice />
     <p class="has-text-centered"> 
         Below is a list of exclusively EU countries. 
     </p>
