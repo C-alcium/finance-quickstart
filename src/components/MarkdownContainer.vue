@@ -9,17 +9,17 @@ import MarkdownIt from 'markdown-it'
 const md = new MarkdownIt()
 
 export default defineComponent({
-  name: 'MarkdownContainer',
-  props: {
-      markdown: {
-          type: String,
-          required: true,
-      } 
-  },
-  computed: {
-      content(): string {
-          return md.render(this.markdown)
-      }
-  }
+    name: 'MarkdownContainer',
+    props: {
+        markdown: {
+            type: String,
+            required: true,
+        } 
+    },
+    computed: {
+        content(): string {
+            return md.render(this.markdown)
+        }
+    }
 })
 </script>

@@ -16,7 +16,7 @@ import CountryISO from '@/types/CountryISO'
 import FlagButton from './FlagButton.vue'
 
 export default defineComponent({
-  components: { FlagButton },
+    components: { FlagButton },
     name:'FlagGrid',
     methods: {
         onFlagClick(item: CountryISO) {

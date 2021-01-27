@@ -11,20 +11,20 @@ import Header from '@/components/Header.vue'
 import { CountryCodes } from './data/CountryCodes'
 
 export default defineComponent({
-  name: 'App',
-  components: {
-    Header
-  },
-  created() {
-    CountryCodes
-      .map(it => it.countryName)
-      .map(it => it.toLowerCase())
-      .forEach(country => {
+    name: 'App',
+    components: {
+        Header
+    },
+    created() {
+        CountryCodes
+            .map(it => it.countryName)
+            .map(it => it.toLowerCase())
+            .forEach(country => {
         import(`@/assets/content/en/faq/${country}.md`)
-          .then((it) => {
-            this.$store.commit('addMarkdown', { countryName: country, markdown: it.default})
-          })
-      })
+            .then((it) => {
+                this.$store.commit('addMarkdown', { countryName: country, markdown: it.default})
+            })
+            })
     }
 })
 </script>

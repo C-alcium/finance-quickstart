@@ -16,7 +16,7 @@ import { defineComponent } from 'vue'
 import Terms from '@/assets/content/en/terms.md'
 
 export default defineComponent({
-  components: { Hero, MarkdownContainer },
+    components: { Hero, MarkdownContainer },
     name: 'CommonTerms',
     data() {
         return {

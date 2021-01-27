@@ -21,16 +21,16 @@ export default defineComponent({
     components: { FeatherIcon },
     name: 'UnderConstructionNotice',
     props: {
-      message: {
-        type: String,
-        default: 'This section is currently under construction',
-        required: false
-      },
-      icon: {
-        type: String,
-        required: false,
-        default: 'alert-triangle'
-      }
+        message: {
+            type: String,
+            default: 'This section is currently under construction',
+            required: false
+        },
+        icon: {
+            type: String,
+            required: false,
+            default: 'alert-triangle'
+        }
     }
 })
 </script>

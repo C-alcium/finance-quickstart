@@ -15,12 +15,12 @@ import Hero from '@/components/Hero.vue'
 import UnderConstructionNotice from '@/components/UnderConstructionNotice.vue'
 
 export default defineComponent({
-  components: { MarkdownContainer, Hero, UnderConstructionNotice },
-  name: 'Home',
-  data() {
-    return {
-    content: HomeContent
+    components: { MarkdownContainer, Hero, UnderConstructionNotice },
+    name: 'Home',
+    data() {
+        return {
+            content: HomeContent
+        }
     }
-  }
 })
 </script>

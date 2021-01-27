@@ -3,16 +3,16 @@ import { State } from 'vue'
 
 export default createStore({
     state: {
-      faq: {},
+        faq: {},
     },
     mutations: {
-      addMarkdown(state: State, { countryName, markdown }) {
-        state.faq[countryName] = markdown 
-      }
+        addMarkdown(state: State, { countryName, markdown }) {
+            state.faq[countryName] = markdown 
+        }
     },
     getters: {
-      getCountryFaq: (state: State) => (country: string) => {
-        return state.faq[country.toLowerCase()]
-      }
+        getCountryFaq: (state: State) => (country: string) => {
+            return state.faq[country.toLowerCase()]
+        }
     }
 })
