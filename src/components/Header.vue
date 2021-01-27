@@ -9,6 +9,7 @@
 </template>
 
 <script lang="ts">
+import { ConfiguredRouteRecord } from '@/router'
 import { defineComponent } from 'vue'
 
 declare interface Route {
@@ -24,12 +25,14 @@ export default defineComponent({
         }
     },
     created() {
-        this.$router.options.routes.forEach(route => {
-            this.routes.push({
-                name: route.name as string,
-                path: route.path as string
+        (this.$router.options.routes as ConfiguredRouteRecord[])
+            .filter(it => it.includeInMenu)
+            .forEach(route => {
+                this.routes.push({
+                    name: route.name as string,
+                    path: route.path as string
+                })
             })
-        })
     }
 })
 </script>
