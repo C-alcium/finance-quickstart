@@ -13,6 +13,9 @@ export default createStore({
     getters: {
         getCountryFaq: (state: State) => (country: string) => {
             return state.faq[country.toLowerCase()]
+        },
+        hasFaq: (state: State) => (country: string) => {
+            return state.faq[country.toLowerCase()] == ''
         }
     }
 })
