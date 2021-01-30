@@ -1,7 +1,10 @@
 <template>
     <div :class="`column is-third has-text-centered ${countryISO.countryName}`">
-        <span :class="`flag-icon flag-icon-${countryISO.code}`" @click="onFlagClick()"/>
-        <button class="button flag-button" @click="onFlagClick()">
+        <span 
+            :class="`flag-icon flag-icon-${countryISO.code}`" 
+            v-bind:style="{ cursor: pointer}"
+            @click="onFlagClick()"/>
+        <button class="button flag-button" @click="onFlagClick()" :disabled="disabled">
             {{ countryISO.countryName }}
         </button>
     </div>
@@ -9,7 +12,7 @@
 
 <script lang="ts">
 import CountryISO from '@/types/CountryISO'
-import { defineComponent } from 'vue'
+import { computed, defineComponent } from 'vue'
 
 export default defineComponent({
     name: 'FlagButton',
@@ -17,10 +20,26 @@ export default defineComponent({
         countryISO: {
             required: true,
             type: Object as () => CountryISO
+        },
+        disabled: {
+            required: false,
+            default: false,
+            type: Boolean
+        }
+    },
+    setup(props) {
+        const pointer = computed(() => props.disabled ? 'auto' : 'pointer')
+
+        return {
+            pointer
         }
     },
     methods: {
         onFlagClick() {
+            if(this.disabled) {
+                return
+            }
+
             this.$parent?.$emit('flagClick', this.countryISO)
         }
     }
@@ -40,6 +59,5 @@ export default defineComponent({
     height: 32px;
     background-size: contain;
     background-repeat: no-repeat;
-    cursor: pointer;
 }
 </style>

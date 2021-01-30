@@ -1,9 +1,9 @@
 <template>
     <div class="flag-grid">
         <div class="columns" v-for="item in countryCodesChunked" :key="item.code">
-            <flag-button :countryISO="item[0]"/>
-            <flag-button :countryISO="item[1]"/>
-            <flag-button :countryISO="item[2]"/>
+            <flag-button :countryISO="item[0]" />
+            <flag-button :countryISO="item[1]" />
+            <flag-button :countryISO="item[2]" />
         </div>
     </div>
 </template>
@@ -24,8 +24,6 @@ export default defineComponent({
         }
     },
     data() {
-        // define all of the EU country codes in just a normal fashion.
-        // later, they will be diced up into thirds
         return {
             countryCodesChunked: chunk(CountryCodes, 3)
         }
