@@ -40,13 +40,13 @@ export default defineComponent({
         }
     },
     methods: {
-        onFlagClick(e: CountryISO) {
-            const res = this.$store.getters.getCountryFaq(e.countryName)
+        onFlagClick(country: CountryISO) {
+            const res = this.$store.getters.getCountryFaq(country.countryName)
 
             if(res) {
                 this.markdown = res
             } else {
-                this.markdown = `# An FAQ for ${e.countryName} is not available yet`
+                this.markdown = `# An FAQ for ${country.countryName} is not available yet`
             }
         }
     },
