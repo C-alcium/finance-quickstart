@@ -40,11 +40,12 @@ export default defineComponent({
 })
 </script>
 
-        <style scoped>
-            .flag-grid {
-            padding-top: 20px;
-            }
-            .columns {
-            padding-top: 30px;
-            }
-        </style>
+<style scoped>
+.flag-grid {
+    padding-top: 20px;
+}
+
+.columns {
+    padding-top: 30px;
+}
+</style>
