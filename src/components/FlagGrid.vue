@@ -1,7 +1,7 @@
 <template>
     <div class="flag-grid">
         <div class="columns is-multiline is-centered is-mobile">
-            <flag-button v-for="country in countries" :key="country.code"
+            <flag-button v-for="country in sortEnabledFirst(countries)" :key="country.code"
                          class="column is-1"
                          :countryISO="country" 
                          :disabled="hasMarkdown(country)"/>
@@ -20,7 +20,7 @@ export default defineComponent({
     name:'FlagGrid',
     setup() {
         return {
-            countries: CountryCodes
+            countries: CountryCodes 
         }
     },
     methods: {
@@ -29,6 +29,12 @@ export default defineComponent({
         },
         hasMarkdown(country: CountryISO): boolean {
             return this.$store.getters.hasFaq(country.countryName)
+        },
+        sortEnabledFirst() {
+            const enabledCountries = CountryCodes.filter(it => this.hasMarkdown(it))
+            const disabledCountries = CountryCodes.filter(it => !this.hasMarkdown(it))
+
+            return disabledCountries.concat(enabledCountries)
         }
     }
 })
