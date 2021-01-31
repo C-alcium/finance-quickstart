@@ -1,17 +1,16 @@
 <template>
     <div class="flag-grid">
-        <div class="columns" v-for="item in countryCodesChunked" :key="item.code">
-            <flag-button v-for="index in 3" 
-                         :key="index" 
-                         :countryISO="item[index - 1]" 
-                         :disabled="hasMarkdown(item[index - 1])"/>
+        <div class="columns is-multiline is-centered is-mobile">
+            <flag-button v-for="country in countries" :key="country.code"
+                         class="column is-1"
+                         :countryISO="country" 
+                         :disabled="hasMarkdown(country)"/>
         </div>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { chunk } from 'lodash'
 import { CountryCodes } from '@/data/CountryCodes'
 import CountryISO from '@/types/CountryISO'
 import FlagButton from './FlagButton.vue'
@@ -21,7 +20,7 @@ export default defineComponent({
     name:'FlagGrid',
     setup() {
         return {
-            countryCodesChunked: chunk(CountryCodes, 3)
+            countries: CountryCodes
         }
     },
     methods: {
@@ -35,11 +34,11 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
-.flag-grid {
-    padding-top: 20px;
-}
-.columns {
-    padding-top: 30px;
-}
-</style>
+        <style scoped>
+            .flag-grid {
+            padding-top: 20px;
+            }
+            .columns {
+            padding-top: 30px;
+            }
+        </style>

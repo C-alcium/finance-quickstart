@@ -7,7 +7,7 @@
         Below is a list of exclusively EU countries. 
     </p>
     <p class="has-text-centered"> 
-        <b>Click</b> or <b>tap</b> on your country to view the FAQ for it.
+        <b>Select</b> your country to view the FAQ for it.
     </p>
     <flag-grid v-on:flagClick="onFlagClick"/>
     <markdown-container :markdown="markdown"/>
